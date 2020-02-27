@@ -1,5 +1,7 @@
 <?php
 require_once 'sidebar.php';
+require_once 'top-bar.php';
+require_once 'small-stats.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,8 +15,17 @@ require_once 'sidebar.php';
   <title>asd</title>
 </head>
 <body>
-<?php
-sidebar();
-?>
+<div id="wrapper">
+    <?php
+    sidebar();
+    ?>
+    <div id="content-wrapper" style="d-flex flex column">
+        <?php      top_bar();
+        small_stats(); ?>
+    </div>
+
+
+</div>
+
 </body>
 </html>
