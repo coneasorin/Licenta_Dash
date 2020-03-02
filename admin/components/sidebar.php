@@ -7,7 +7,7 @@ print '
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="localhost/admin/index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-notes-medical"></i>
         </div>
@@ -22,32 +22,30 @@ print '
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Link-uri utile
+        Panou de comanda
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      
-
-      <!-- Grafice -->
+        <!-- Adauga Pacient -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span>Grafice</span>
+        <a class="nav-link" href="components/adauga_pacient.php/">
+          <span>Adauga Pacient</span>
         </a>
       </li>
 
 
-      <!-- Analize -->
+      <!-- Adauga Analize -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <span>Analize</span>
+          <span>Adauga Analize</span>
         </a>
       </li>
 
 
-      <!-- Programari -->
+
+      <!-- Adauga Medici -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <span>Programari</span>
+          <span>Adauga Medici</span>
         </a>
       </li>
 

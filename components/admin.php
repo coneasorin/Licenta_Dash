@@ -21,8 +21,8 @@ require_once 'small-stats.php';
     sidebar();
     ?>
     <div id="content-wrapper" style="d-flex flex column">
-        <?php   top_bar(); 
-        small_stats();?>
+        <?php      top_bar();
+        small_stats(); ?>
     </div>
 
 
