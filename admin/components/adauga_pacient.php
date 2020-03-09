@@ -11,7 +11,7 @@ require_once 'small-stats.php';
    <script src="https://kit.fontawesome.com/319610a3d1.js" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template-->
-  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../../css/sb-admin-2.min.css" rel="stylesheet">
 
   <title>TEST</title>
 </head>
@@ -24,30 +24,33 @@ require_once 'small-stats.php';
         <?php top_bar(); ?>
 
 
-        <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Adauga pacient </h6>
+        <div class="card shadow mb-4 container">
+                <div class="card-header py-3 ">
+                  <h6 class="m-0 font-weight-bold text-primary ">Adauga pacient </h6>
                 </div>
-                <div class="card-body">
+
+
+                <div class="card-header py-3 align-items-center justify-content-between">
                   <p class="">CNP</p>
-                   <input type="text" class=" col-xl-2 form-control " name="CNP"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="CNP"></input>
+                   <p class="">Parola</p>
+                   <input type="password" class="col-xs-2 form-control" name="grupa_sange"></input>
                    <p class="">Nume</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Nume"></input>
                    <p class="">Prenume</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Prenume"></input>
                    <p class="">Varsta</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Varsta"></input>
+                   <p class="">Inaltime</p>
+                   <input type="text" class="col-xs-2 form-control" name="Inaltime"></input>
+                   <p class="">Greutate</p>
+                   <input type="text" class="col-xs-2 form-control" name="Greutate"></input>
+                   <p class="">Grupa Sanuina</p>
+                   <input type="text" class="col-xs-2 form-control" name="grupa_sange"></input>
+                   <br>
+                    <a href="#" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</a>
                 </div>
-                 <div class="card-body">
-                  <p class="">CNP</p>
-                   <input type="text" class=" col-xl-2 form-control " name="CNP"></input>
-                   <p class="">Nume</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
-                   <p class="">Prenume</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
-                   <p class="">Varsta</p>
-                   <input type="text" class="col-xl-2 form-control" name="Nume"></input>
-                </div>
+
               </div>
 
         </form>

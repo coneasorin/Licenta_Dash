@@ -54,8 +54,8 @@ print '
 
       <!-- Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="/medici.php/">
-          <span>Lista Medici</span>
+        <a class="nav-link" href="#">
+          <span>Medici de garda</span>
         </a>
       </li>
 

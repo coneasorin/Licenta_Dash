@@ -25,6 +25,14 @@ print '
         Panou de comanda
       </div>
 
+         <!-- Statistici -->
+      <li class="nav-item">
+        <a class="nav-link" href="components/">
+          <span>Statistici Clinica</span>
+        </a>
+      </li>
+
+
         <!-- Adauga Pacient -->
       <li class="nav-item">
         <a class="nav-link" href="components/adauga_pacient.php/">
@@ -35,7 +43,7 @@ print '
 
       <!-- Adauga Analize -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="components/adauga_analize.php/">
           <span>Adauga Analize</span>
         </a>
       </li>
@@ -44,16 +52,8 @@ print '
 
       <!-- Adauga Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="components/adauga_medici.php/">
           <span>Adauga Medici</span>
-        </a>
-      </li>
-
-
-      <!-- Medici -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span>Medici de garda</span>
         </a>
       </li>
 
