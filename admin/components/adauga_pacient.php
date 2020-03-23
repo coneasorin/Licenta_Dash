@@ -29,28 +29,29 @@ require_once 'small-stats.php';
                   <h6 class="m-0 font-weight-bold text-primary ">Adauga pacient </h6>
                 </div>
 
-
+                     <form action="adauga_pacient_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
+               
                   <p class="">CNP</p>
-                   <input type="text" class=" col-xs-2 form-control " name="CNP"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="CNP" id="CNP"></input>
                    <p class="">Parola</p>
-                   <input type="password" class="col-xs-2 form-control" name="grupa_sange"></input>
+                   <input type="password" class="col-xs-2 form-control" name="parola" id="parola"></input>
                    <p class="">Nume</p>
-                   <input type="text" class="col-xs-2 form-control" name="Nume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Nume" id="Nume"></input>
                    <p class="">Prenume</p>
-                   <input type="text" class="col-xs-2 form-control" name="Prenume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Prenume" id="Prenume"></input>
                    <p class="">Varsta</p>
-                   <input type="text" class="col-xs-2 form-control" name="Varsta"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Varsta" id="Varsta"></input>
                    <p class="">Inaltime</p>
-                   <input type="text" class="col-xs-2 form-control" name="Inaltime"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Inaltime" id="Inaltime"></input>
                    <p class="">Greutate</p>
-                   <input type="text" class="col-xs-2 form-control" name="Greutate"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Greutate" id="Greutate"></input>
                    <p class="">Grupa Sanuina</p>
-                   <input type="text" class="col-xs-2 form-control" name="grupa_sange"></input>
+                   <input type="text" class="col-xs-2 form-control" name="grupa_sange" id="grupa_sange"></input>
                    <br>
-                    <a href="#" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</a>
+                    <button type="submit" class=" btn btn-sm btn-primary"> <i class="fas fa-check"></i> Adauga Pacient  </button>
                 </div>
-
+                  </form>
               </div>
 
         </form>
