@@ -15,6 +15,7 @@ if (isset($_POST['adauga_pacient'])) {
     $Greutate = mysqli_real_escape_string($link, $_REQUEST['Greutate']);
     $Grupa_sange = mysqli_real_escape_string($link, $_REQUEST['Grupa_sange']);
 
+      echo "Sunt HAY";
     $sql = "INSERT INTO pacienti (CNP, Parola, Nume, Prenume, Varsta, Inaltime, Greutate, Grupa_sange) 
         VALUES ('$CNP', '$Parola', '$Nume', '$Prenume', '$Varsta', '$Inaltime', '$Greutate', '$Grupa_sange')";
     if(mysqli_query($link, $sql)){

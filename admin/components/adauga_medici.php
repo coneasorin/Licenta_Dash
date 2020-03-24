@@ -29,27 +29,27 @@ require_once 'small-stats.php';
                   <h6 class="m-0 font-weight-bold text-primary ">ADAUGA MEDIC NOU </h6>
                 </div>
 
-
+                	<form action="../adauga_medici_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
                   <p class="">Numele </p>
-                   <input type="text" class=" col-xs-2 form-control " name="nume_medic"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="nume_medic" id="nume_medic"></input>
 
                    <p class="">Prenume </p>
-                   <input type="text" class=" col-xs-2 form-control " name="prenume_medic"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="prenume_medic" id="prenume_medic"></input>
 
                    <p class="">Specializare</p>
-                   <input type="text" class=" col-xs-2 form-control " name="specializare_medic"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="specializare_medic" id="specializare_medic"></input>
 
                    <p class="">Anul absolvirii facultatii de medicina</p>
-                   <input type="text" class=" col-xs-2 form-control " name="an_absolvire_facultate"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="an_absolvire_facultate" id="an_absolvire_facultate"></input>
 
                    <p class="">CNP</p>
-                   <input type="text" class=" col-xs-2 form-control " name="cnp_medic"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="CNP" id="CNP"></input>
                    <br>
-                      <a href="#" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga un medic nou</a>
+                      <button type="submit" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga un medic nou</button>
 
                 </div> 
-
+                	<form>
               </div>
 
         </form>
