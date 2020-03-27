@@ -25,34 +25,34 @@ require_once 'top-bar.php';
                   <h6 class="m-0 font-weight-bold text-primary ">Adauga analize unui pacient existent </h6>
                 </div>
 
-
+                 <form action="../adauga_analize_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
                   <p class="">CNP</p>
-                   <input type="text-primary" class="col-xs-2 form-control" name="CNP">
+                   <input type="text-primary" class="col-xs-2 form-control" name="CNP" id="CNP">
                   
                    <p class="">WBC (leucocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="wbc">
+                    <input type="text-primary" class="col-xs-2 form-control" name="wbc" id="wbc">
                   
                     <p class="">LYM (limfocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="lym">
+                    <input type="text-primary" class="col-xs-2 form-control" name="lym" id="lym">
                   
                     <p class="">MON (monocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="mon">
+                    <input type="text-primary" class="col-xs-2 form-control" name="mon" id="mon">
                   
                     <p class="">GRA (granulocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="gra">
+                    <input type="text-primary" class="col-xs-2 form-control" name="gra" id="gra">
 
 
                     <p class="">HgB (hemoglobina) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="hgb">
+                    <input type="text-primary" class="col-xs-2 form-control" name="hgb" id="hgb"> 
 
                     <p class="">Plt (trombocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="plt">
+                    <input type="text-primary" class="col-xs-2 form-control" name="plt" id="plt">
 
 
-                    <a href="#" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</a>
+                    <button type="submit" name="adauga_analize" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</button>
                 </div>
-
+                  <form>
               </div>
 
         </form>

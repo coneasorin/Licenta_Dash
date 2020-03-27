@@ -38,7 +38,7 @@ print '
 
       <!-- Analize -->
       <li class="nav-item">
-<   a class="nav-link" href="./../adauga_pacient.php/">
+      <a class="nav-link" href="./../adauga_pacient.php/">
           <span>Analize</span>
         </a>
       </li>

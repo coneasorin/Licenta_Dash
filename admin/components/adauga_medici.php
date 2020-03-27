@@ -44,9 +44,9 @@ require_once 'small-stats.php';
                    <input type="text" class=" col-xs-2 form-control " name="an_absolvire_facultate" id="an_absolvire_facultate"></input>
 
                    <p class="">CNP</p>
-                   <input type="text" class=" col-xs-2 form-control " name="CNP" id="CNP"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="cnp" id="cnp"></input>
                    <br>
-                      <button type="submit" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga un medic nou</button>
+                      <button type="submit"  name ="adauga_medici" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga un medic nou</button>
 
                 </div> 
                 	<form>
