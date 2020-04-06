@@ -1,3 +1,20 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+  }
+
+?>
+
+
 <?php
 
 function top_bar ()
@@ -21,10 +38,9 @@ function top_bar ()
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="logout.php" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Conea Sorin</span>
-                <img class="img-profile rounded-circle" src="https://spikecsi.com/wp-content/uploads/2020/01/Artboard-1.png">
-              </a>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMINISTRATOR</span>
+                <a href="index.php?logout" style="color:red ">Deconectare</a>
+             
               
             </li>
 

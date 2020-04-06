@@ -1,4 +1,3 @@
-<?php require('./simple_dom/simple_html_dom.php'); ?>
 <?php
         function small_stats ()
         {
