@@ -11,7 +11,7 @@
 		<h3>Pentru a vedea informatiile dvs va rugam sa va autentificati.</h3>
 	</div>
 	
-	<form method="post" action="./login.php">
+	<form method="post" action="index.php/">
 
 		<?php include('errors.php'); ?>
 

@@ -30,7 +30,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['CNP'] = $CNP;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: ../Licenta_Dash/components/');
+				header('location: /components/');
 			}else {
 				array_push($errors, "Wrong CNP/Parola combination");
 			}
