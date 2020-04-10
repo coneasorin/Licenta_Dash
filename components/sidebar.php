@@ -54,7 +54,7 @@ print '
 
       <!-- Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="/medici.php/">
+        <a class="nav-link" href="./lista_medici.php">
           <span>Lista Medici</span>
         </a>
       </li>

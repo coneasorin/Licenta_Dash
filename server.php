@@ -14,7 +14,7 @@
 	if (isset($_POST['login_user'])) {
 		$CNP = mysqli_real_escape_string($db, $_POST['CNP']);
 		$Parola = mysqli_real_escape_string($db, $_POST['Parola']);
-
+		$_Session['CNP']=$CNP;
 		if (empty($CNP)) {
 			array_push($errors, "CNP is required");
 		}
@@ -30,7 +30,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['CNP'] = $CNP;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: /components/');
+				header('location: ../Licenta_Dash/components/');
 			}else {
 				array_push($errors, "Wrong CNP/Parola combination");
 			}

@@ -1,15 +1,16 @@
-<?php 
+<?php
+$mysqli = new mysqli("localhost", 'root', '', 'licenta');
+require_once 'functii.php';
   session_start(); 
 
-  // if (!isset($_SESSION['username'])) {
-  //   $_SESSION['msg'] = "You must log in first";
-  //   header('location: ./login.php');
-  // }
+  if (!isset($_SESSION['CNP'])) {
+  header("location: ../index.php");
+  }
 
   if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: ../login.php");
+    header("location: ../index.php");
   }
 
 ?>
@@ -17,12 +18,21 @@
 
 <?php
 
+
+
 function top_bar ()
 {
+  $mysqli = new mysqli("localhost", 'root', '', 'licenta');
+  $CNP=$_SESSION['CNP'];
+$sql = "SELECT Nume, Prenume FROM pacienti where CNP='$CNP'";
+$result = mysqli_query($mysqli, $sql);
 
+while($row = mysqli_fetch_assoc($result)) {
+        $nume_pacient=$row['Nume'];  
+        $prenume_pacient=$row['Prenume'];
+    }
     print '
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
 
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
@@ -38,7 +48,7 @@ function top_bar ()
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small">PACIENT</span>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">'.$nume_pacient.' '.$prenume_pacient.'</span>
                 <a href="index.php?logout" style="color:red ">Deconectare</a>
              
               
