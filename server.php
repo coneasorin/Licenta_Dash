@@ -24,7 +24,6 @@
 
 		if (count($errors) == 0) {
 			$query = "SELECT * FROM pacienti WHERE CNP='$CNP' AND Parola='$Parola'";
-			echo $Parola;
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {

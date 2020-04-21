@@ -1,6 +1,91 @@
 <?php
         function small_stats ()
         {
+                      //Numarul de pacienti inregistrati
+       $mysqli = new mysqli("localhost", 'root', '', 'licenta');
+      $sql = "SELECT count(CNP) as nr_pacienti from pacienti";
+      $result = mysqli_query($mysqli, $sql);
+
+      while($row = mysqli_fetch_assoc($result)) {
+            $num_conturi=$row['nr_pacienti'];  
+                              }
+
+                //Numarul de medici            
+      $sql2 = "SELECT count(CNP) as nr_medici from medici";
+      $result2 = mysqli_query($mysqli, $sql2);
+
+      while($row2 = mysqli_fetch_assoc($result2)) {
+            $num_medici=$row2['nr_medici'];  
+                              }
+
+
+
+                                //Numarul de pacienti infectati            
+      $sql3 = "SELECT p_infectate from statistici";
+      $result3 = mysqli_query($mysqli, $sql3);
+
+      while($row3 = mysqli_fetch_assoc($result3)) {
+            $pers_infectate=$row3['p_infectate'];  
+                              }
+
+                               //Numarul de pacienti vindecati            
+      $sql4 = "SELECT p_vindecate from statistici";
+      $result4 = mysqli_query($mysqli, $sql4);
+
+      while($row4 = mysqli_fetch_assoc($result4)) {
+            $pers_vindecate=$row4['p_vindecate'];  
+                              }
+
+                              //Numarul de pacienti decedati            
+      $sql5 = "SELECT p_decedate from statistici";
+      $result5 = mysqli_query($mysqli, $sql5);
+
+      while($row5 = mysqli_fetch_assoc($result5)) {
+            $pers_decedate=$row5['p_decedate'];  
+                              }
+
+ 
+ 
+ 
+$dataPoints = array(
+  array("x"=> 10, "y"=> 41),
+  array("x"=> 20, "y"=> 35, "indexLabel"=> "Lowest"),
+  array("x"=> 30, "y"=> 50),
+  array("x"=> 40, "y"=> 45),
+  array("x"=> 50, "y"=> 52),
+  array("x"=> 60, "y"=> 68),
+  array("x"=> 70, "y"=> 38),
+  array("x"=> 80, "y"=> 71, "indexLabel"=> "Highest"),
+  array("x"=> 90, "y"=> 52),
+  array("x"=> 100, "y"=> 60),
+  array("x"=> 110, "y"=> 36),
+  array("x"=> 120, "y"=> 49),
+  array("x"=> 130, "y"=> 41)
+);
+  
+    
+          echo '<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+  exportEnabled: true,
+  theme: "light1", // "light1", "light2", "dark1", "dark2"
+  title:{
+    text: "Simple Column Chart with Index Labels"
+  },
+  data: [{
+    type: "column", //change type to bar, line, area, pie, etc
+    //indexLabel: "{y}", //Shows y value on all Data Points
+    indexLabelFontColor: "#5A5757",
+    indexLabelPlacement: "outside",   
+    dataPoints:  echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+  }]
+});
+chart.render();
+ 
+}
+</script>';
             print '<div class="container-fluid">
 
           <!-- Page Heading -->
@@ -38,7 +123,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Cazuri de COVID19 identificate</div>
-                      <div class="h5 mb-0 font-weight-bold text-danger">50.000</div>
+                      <div class="h5 mb-0 font-weight-bold text-danger">'.$pers_infectate.'</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-lungs-virus fa-2x text-gray-300"></i>
@@ -54,7 +139,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pacienti recuperati</div>
-                      <div class="h5 mb-0 font-weight-bold text-success">50.000</div>
+                      <div class="h5 mb-0 font-weight-bold text-success">'.$pers_vindecate.'</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-virus-slash fa-2x text-gray-300"></i>
@@ -70,11 +155,11 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Teste efectuate</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">37.250</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pacienti decedati</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">'.$pers_decedate.'</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-syringe fa-2x text-gray-300"></i>
+                      <i class="fas fa-cross fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>
@@ -125,7 +210,8 @@
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-area">
-                    asdasd
+                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                   </div>
                 </div>
               </div>
@@ -153,18 +239,8 @@
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
-                    </span>
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                   </div>
                 </div>
               </div>
@@ -175,62 +251,6 @@
           <div class="row">
 
             <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-
-        
-              <!-- Color System -->
-              <div class="row">
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
-                      Primary
-                      <div class="text-white-50 small">#4e73df</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-success text-white shadow">
-                    <div class="card-body">
-                      Success
-                      <div class="text-white-50 small">#1cc88a</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-info text-white shadow">
-                    <div class="card-body">
-                      Info
-                      <div class="text-white-50 small">#36b9cc</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-warning text-white shadow">
-                    <div class="card-body">
-                      Warning
-                      <div class="text-white-50 small">#f6c23e</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-danger text-white shadow">
-                    <div class="card-body">
-                      Danger
-                      <div class="text-white-50 small">#e74a3b</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-secondary text-white shadow">
-                    <div class="card-body">
-                      Secondary
-                      <div class="text-white-50 small">#858796</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
 
             <div class="col-lg-6 mb-4">
 
@@ -254,6 +274,7 @@
           </div>
 
         </div>';
+        
 
         }
 
