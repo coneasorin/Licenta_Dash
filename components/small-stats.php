@@ -44,48 +44,10 @@
             $pers_decedate=$row5['p_decedate'];  
                               }
 
- 
- 
- 
-$dataPoints = array(
-  array("x"=> 10, "y"=> 41),
-  array("x"=> 20, "y"=> 35, "indexLabel"=> "Lowest"),
-  array("x"=> 30, "y"=> 50),
-  array("x"=> 40, "y"=> 45),
-  array("x"=> 50, "y"=> 52),
-  array("x"=> 60, "y"=> 68),
-  array("x"=> 70, "y"=> 38),
-  array("x"=> 80, "y"=> 71, "indexLabel"=> "Highest"),
-  array("x"=> 90, "y"=> 52),
-  array("x"=> 100, "y"=> 60),
-  array("x"=> 110, "y"=> 36),
-  array("x"=> 120, "y"=> 49),
-  array("x"=> 130, "y"=> 41)
-);
-  
-    
-          echo '<script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-  animationEnabled: true,
-  exportEnabled: true,
-  theme: "light1", // "light1", "light2", "dark1", "dark2"
-  title:{
-    text: "Simple Column Chart with Index Labels"
-  },
-  data: [{
-    type: "column", //change type to bar, line, area, pie, etc
-    //indexLabel: "{y}", //Shows y value on all Data Points
-    indexLabelFontColor: "#5A5757",
-    indexLabelPlacement: "outside",   
-    dataPoints:  echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-  }]
-});
-chart.render();
- 
-}
-</script>';
+
+
+
+
             print '<div class="container-fluid">
 
           <!-- Page Heading -->
@@ -172,12 +134,28 @@ chart.render();
               <!-- Approach -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-danger">INFORMTATII UTILE PRIVINT NOUL VIRUS COVID19</h6>
+                  <h6 class="m-0 font-weight-bold text-danger" style="text-align: center">INFORMTATII UTILE PRIVINT NOUL VIRUS COVID19</h6>
                 </div>
                 <div class="card-body border-left-danger">
-                  <p>Avand in vedere evolutia virusul va rugam sa respectati cu strictete masurile de igiena personala:</p>
-                  <p> Spalati-va pe maini ori de cate ori aveti ocazia</p>
-                  <p> Evitati locurile aglomerate </p>
+                 
+<center><p><b>Spălaţi-vă mâinile</b>
+frecvent cu apă şi săpun sau curatati-le cu un dezinfectant de mâini pe bază de alcool</p>
+
+
+<p><b>Acoperiti-va gura
+gura și nasul </b>dacă stranuti sau tușiți. Nu vă atingeți ochii cu mâinile.</p>
+
+
+<p><b>Evitaţi contactul
+direct</b> cu orice persoană care are simptome de răceală sau gripă</p>
+
+
+<p><b>Curățați toate suprafețele</b>
+cu dezinfectanți ce conțin, clor, înălbitori, solvent, etanol de 75%, acid peracetic</p>
+
+
+<p><b>Adresaţi-vă medicului</b>
+Adresaţi-vă medicului dacă aveţi febră, tuşiți sau respiraţi greu;</p></center>
                 </div>
               </div>
         
@@ -209,10 +187,9 @@ chart.render();
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div class="chart-area">
-                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-                  </div>
+                  <div class="chart-area">';
+                require_once 'chart.php';
+                 print ' </div>
                 </div>
               </div>
             </div>

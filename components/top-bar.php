@@ -48,7 +48,7 @@ while($row = mysqli_fetch_assoc($result)) {
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small">'.$nume_pacient.' '.$prenume_pacient.'</span>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bun venit,  '.$nume_pacient.' '.$prenume_pacient.'</span>
                 <a href="index.php?logout" style="color:red ">Deconectare</a>
              
               
