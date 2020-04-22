@@ -49,6 +49,10 @@ require_once 'top-bar.php';
                     <p class="">Plt (trombocite) </p>
                     <input type="text-primary" class="col-xs-2 form-control" name="plt" id="plt">
 
+                    <p class="">Data prelevarii analizelor </p>
+                    <input type="date" class="col-xs-2 form-control" name="data" id="data">
+                    <br>
+
 
                     <button type="submit" name="adauga_analize" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</button>
                 </div>

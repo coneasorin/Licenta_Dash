@@ -18,45 +18,59 @@ require_once 'top-bar.php';
     sidebar();
     ?>
     <div id="content-wrapper" style="d-flex flex column">
-        <?php top_bar(); ?>
+      <style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
 
-        <div class="card shadow mb-4 container">
-                <div class="card-header py-3 ">
-                  <h6 class="m-0 font-weight-bold text-primary ">Adauga analize unui pacient existent </h6>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+        <?php top_bar();
+        echo'     <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Lista medicilor din unitatea medicala</h6>
                 </div>
+                <div class="card-body border-left-success">';
 
-                 <form action="../adauga_analize_date.php" method="post">
-                <div class="card-header py-3 align-items-center justify-content-between">
-                  <p class="">CNP</p>
-                   <input type="text-primary" class="col-xs-2 form-control" name="CNP" id="CNP">
-                  
-                   <p class="">WBC (leucocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="wbc" id="wbc">
-                  
-                    <p class="">LYM (limfocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="lym" id="lym">
-                  
-                    <p class="">MON (monocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="mon" id="mon">
-                  
-                    <p class="">GRA (granulocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="gra" id="gra">
+            $mysqli = new mysqli("localhost", 'root', '', 'licenta'); 
+$query = "SELECT * FROM medici";
+ 
+ 
+echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px;"> 
+      <tr> 
+          <td> <font face="Arial">Numele</font> </td> 
+          <td> <font face="Arial">Prenumele</font> </td> 
+          <td> <font face="Arial">Specializare</font> </td> 
+          <td> <font face="Arial">Anul absolvitii facultatii<br> de medicina</font> </td> 
+      </tr>';
+ 
+if ($result = $mysqli->query($query)) {
+    while ($row = $result->fetch_assoc()) {
+        $Numele = $row["Numele"];
+        $Prenumele = $row["Prenumele"];
+        $Specializare = $row["Specializare"];
+        $Absolvit = $row["Absolvit"]; 
+ 
+        echo '<tr> 
+                  <td>'.$Numele.'</td> 
+                  <td>'.$Prenumele.'</td> 
+                  <td>'.$Specializare.'</td> 
+                  <td>'.$Absolvit.'</td> 
+              </tr>';
+    }
+    $result->free();
+} 
 
-
-                    <p class="">HgB (hemoglobina) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="hgb" id="hgb"> 
-
-                    <p class="">Plt (trombocite) </p>
-                    <input type="text-primary" class="col-xs-2 form-control" name="plt" id="plt">
-
-
-                    <button type="submit" name="adauga_analize" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</button>
-                </div>
-                  <form>
-              </div>
-
-        </form>
-      </div>
+        ?>
+      </div></div>
     </div>
 
 

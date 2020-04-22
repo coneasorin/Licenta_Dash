@@ -30,7 +30,7 @@ print '
 
       <!-- Grafice -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="./" target="_top">
           <span>Grafice</span>
         </a>
       </li>
@@ -38,7 +38,7 @@ print '
 
       <!-- Analize -->
       <li class="nav-item">
-      <a class="nav-link" href="./../adauga_pacient.php/">
+      <a class="nav-link" href="./lista_analize.php" target="_top">
           <span>Analize</span>
         </a>
       </li>
@@ -46,7 +46,7 @@ print '
 
       <!-- Programari -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" >
           <span>Programari</span>
         </a>
       </li>
@@ -54,7 +54,7 @@ print '
 
       <!-- Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="./lista_medici.php">
+        <a class="nav-link" href="./lista_medici.php" target="_top">
           <span>Lista Medici</span>
         </a>
       </li>

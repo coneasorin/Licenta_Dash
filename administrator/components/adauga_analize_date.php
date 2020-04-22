@@ -3,7 +3,7 @@ if (isset($_POST['adauga_analize'])) {
     $link = mysqli_connect("localhost", "root", "", "licenta");
 
     if ($link === false) {
-        die("ERROR: Could not connect. " . mysqli_connect_error());
+        die("Eroare la conectarea la baza de date " . mysqli_connect_error());
     }
 
     $CNP = mysqli_real_escape_string($link, $_REQUEST['CNP']);
@@ -13,13 +13,14 @@ if (isset($_POST['adauga_analize'])) {
     $gra = mysqli_real_escape_string($link, $_REQUEST['gra']);
      $hgb = mysqli_real_escape_string($link, $_REQUEST['hgb']);
       $plt = mysqli_real_escape_string($link, $_REQUEST['plt']);
+       $data = mysqli_real_escape_string($link, $_REQUEST['data']);
 
-    $sql = "INSERT INTO analize (CNP, WBC, LYM, GRA, HgB, Plt) 
-        VALUES ('$CNP', '$wbc', '$lym', '$gra', '$hgb', '$plt')";
+    $sql = "INSERT INTO analize (CNP, WBC, LYM, GRA, HgB, Plt, data) 
+        VALUES ('$CNP', '$wbc', '$lym', '$gra', '$hgb', '$plt', '$data')";
     if(mysqli_query($link, $sql)){
-        echo "Records added successfully.";
+        echo "Datele au fost adaugate cu succes.";
     } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        echo "NU am putut adauga datele. " . mysqli_error($link);
     }
 
     mysqli_close($link);
