@@ -27,7 +27,7 @@ print '
 
          <!-- Statistici -->
       <li class="nav-item">
-        <a class="nav-link" href="components/">
+        <a class="nav-link" href="../components/" target="_self">
           <span>Statistici Clinica</span>
         </a>
       </li>
@@ -35,7 +35,7 @@ print '
 
         <!-- Adauga Pacient -->
       <li class="nav-item">
-        <a class="nav-link" href="./components/adauga_pacient.php">
+        <a class="nav-link" href="../components/adauga_pacient.php" target="_self">
           <span>Adauga Pacient</span>
         </a>
       </li>
@@ -43,7 +43,7 @@ print '
 
       <!-- Adauga Analize -->
       <li class="nav-item">
-        <a class="nav-link" href="./components/adauga_analize.php">
+        <a class="nav-link" href="../components/adauga_analize.php" target="_self">
           <span>Adauga Analize</span>
         </a>
       </li>
@@ -52,7 +52,7 @@ print '
 
       <!-- Adauga Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="./components/adauga_medici.php">
+        <a class="nav-link" href="../components/adauga_medici.php" target="_self">
           <span>Adauga Medici</span>
         </a>
       </li>
