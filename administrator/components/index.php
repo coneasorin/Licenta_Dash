@@ -13,7 +13,7 @@ require_once 'small-stats.php';
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
 
-  <title>asd</title>
+  <title>Modul Administrator</title>
 </head>
 <body>
 <div id="wrapper">

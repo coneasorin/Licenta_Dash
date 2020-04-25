@@ -26,10 +26,10 @@ require_once 'small-stats.php';
 
         <div class="card shadow mb-4 container">
                 <div class="card-header py-3 ">
-                  <h6 class="m-0 font-weight-bold text-primary ">ADAUGA MEDIC NOU </h6>
+                  <h6 class="m-0 font-weight-bold text-primary ">ADAUGĂ MEDIC NOU </h6>
                 </div>
 
-                	<form action="../adauga_medici_date.php" method="post">
+                	<form action="./adauga_medici_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
                   <p class="">Numele </p>
                    <input type="text" class=" col-xs-2 form-control " name="nume_medic" id="nume_medic"></input>
@@ -40,13 +40,13 @@ require_once 'small-stats.php';
                    <p class="">Specializare</p>
                    <input type="text" class=" col-xs-2 form-control " name="specializare_medic" id="specializare_medic"></input>
 
-                   <p class="">Anul absolvirii facultatii de medicina</p>
+                   <p class="">Anul absolvirii facultății de medicină</p>
                    <input type="text" class=" col-xs-2 form-control " name="an_absolvire_facultate" id="an_absolvire_facultate"></input>
 
                    <p class="">CNP</p>
                    <input type="text" class=" col-xs-2 form-control " name="cnp" id="cnp"></input>
                    <br>
-                      <button type="submit"  name ="adauga_medici" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga un medic nou</button>
+                      <button type="submit"  name ="adauga_medici" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adaugă un medic nou</button>
 
                 </div> 
                 	<form>

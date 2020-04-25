@@ -1,3 +1,4 @@
+
 <?php
         function small_stats ()
         {
@@ -100,7 +101,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pacienti recuperati</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pacienți recuperati</div>
                       <div class="h5 mb-0 font-weight-bold text-success">'.$pers_vindecate.'</div>
                     </div>
                     <div class="col-auto">
@@ -117,7 +118,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pacienti decedati</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pacienți decedati</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">'.$pers_decedate.'</div>
                     </div>
                     <div class="col-auto">
@@ -134,7 +135,7 @@
               <!-- Approach -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-danger" style="text-align: cente">INFORMTATII UTILE PRIVINT NOUL VIRUS COVID19</h6>
+                  <h6 class="m-0 font-weight-bold text-danger" style="text-align: cente">INFORMAȚII UTILE PRIVIND NOUL VIRUS COVID19</h6>
                 </div>
                 <div class="card-body border-left-danger">
                  
@@ -186,7 +187,7 @@ Adresaţi-vă medicului dacă aveţi febră, tuşiți sau respiraţi greu;</p></
                 </div>
                 <div class="card-body">
                   <p><span style="font-size:20px; font-weight:bold;">Covid-19</span> este un virus respirator care se răspândeşte în primul rând prin contactul cu o persoană infectată prin inhalarea unor particule provenite din tuse, strănut, picături de salivă, secreţii nazale. Este importantă exersarea unei igiene respiratorii bune. Când strănutaţi sau tuşiţi, apropiaţi gura de partea inferioară a cotului sau folosiţi şervetele pe care aruncati-le imediat la coşul de gunoi. Spălaţi-vă cât mai des pe mâini şi folosiţi geluri antibacteriene pe bază de alcool.</p>
-                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw →</a>
+                  <a target="_blank" rel="nofollow" href="https://https://stirioficiale.ro/informatii/">Informează-te de surse oficiale →</a>
                 </div>
               </div>
 

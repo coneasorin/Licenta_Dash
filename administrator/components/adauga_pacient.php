@@ -29,25 +29,29 @@ require_once 'small-stats.php';
                   <h6 class="m-0 font-weight-bold text-primary ">Adauga pacient </h6>
                 </div>
 
-                     <form action="../adauga_pacient_date.php" method="post">
+                     <form action="./adauga_pacient_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
                
                   <p class="">CNP</p>
-                   <input type="text" class=" col-xs-2 form-control " name="CNP" id="CNP"></input>
-                   <p class="">Parola</p>
-                   <input type="password" class="col-xs-2 form-control" name="Parola" id="parola"></input>
+                   <input type="text" class=" col-xs-2 form-control " name="CNP" id="CNP" required></input>
+                   <!-- <p class="">Parolă</p>
+                   <input type="password" class="col-xs-2 form-control" name="Parola" id="parola" required></input> -->
+                   <p class="">Email</p>
+                   <input type="text" class="col-xs-2 form-control" name="Email" id="Email" required></input>
+                   <p class=""><span style="font-weight: bold;">Repeta Email</span></p>
+                   <input type="text" class="col-xs-2 form-control" name="Emailv" id="Emailv" required></input>
                    <p class="">Nume</p>
-                   <input type="text" class="col-xs-2 form-control" name="Nume" id="Nume"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Nume" id="Nume" required></input>
                    <p class="">Prenume</p>
-                   <input type="text" class="col-xs-2 form-control" name="Prenume" id="Prenume"></input>
-                   <p class="">Varsta</p>
-                   <input type="text" class="col-xs-2 form-control" name="Varsta" id="Varsta"></input>
-                   <p class="">Inaltime</p>
-                   <input type="text" class="col-xs-2 form-control" name="Inaltime" id="Inaltime"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Prenume" id="Prenume"required></input>
+<!--                    <p class="">Vârstă</p>
+                   <input type="text" class="col-xs-2 form-control" name="Varsta" id="Varsta" required></input> -->
+                   <p class="">Inălțime</p>
+                   <input type="text" class="col-xs-2 form-control" name="Inaltime" id="Inaltime" required></input>
                    <p class="">Greutate</p>
-                   <input type="text" class="col-xs-2 form-control" name="Greutate" id="Greutate"></input>
-                   <p class="">Grupa Sanuina</p>
-                   <input type="text" class="col-xs-2 form-control" name="Grupa_sange" id="grupa_sange"></input>
+                   <input type="text" class="col-xs-2 form-control" name="Greutate" id="Greutate" required></input>
+                   <p class="">Grupa Sangvină</p>
+                   <input type="text" class="col-xs-2 form-control" name="Grupa_sange" id="grupa_sange" required></input>
                    <br>
                    <input type="submit" class=" btn btn-sm btn-primary" name="adauga_pacient" value="Adauga Pacient">
                 </div>

@@ -30,7 +30,7 @@ print '
 
       <!-- Grafice -->
       <li class="nav-item">
-        <a class="nav-link" href="./" target="_top">
+        <a class="nav-link" href="../components" target="_top">
           <span>Grafice</span>
         </a>
       </li>

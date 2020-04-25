@@ -25,7 +25,7 @@ require_once 'top-bar.php';
                   <h6 class="m-0 font-weight-bold text-primary ">Adauga analize unui pacient existent </h6>
                 </div>
 
-                 <form action="../adauga_analize_date.php" method="post">
+                 <form action="./adauga_analize_date.php" method="post">
                 <div class="card-header py-3 align-items-center justify-content-between">
                   <p class="">CNP</p>
                    <input type="text-primary" class="col-xs-2 form-control" name="CNP" id="CNP">

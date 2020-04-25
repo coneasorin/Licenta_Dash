@@ -22,29 +22,29 @@ print '
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Panou de comanda
+        Panou de comandă
       </div>
 
          <!-- Statistici -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/" target="_self">
-          <span>Statistici Clinica</span>
+        <a class="nav-link" href="./" target="_self">
+          <span>Statistici Clinică</span>
         </a>
       </li>
 
 
         <!-- Adauga Pacient -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/adauga_pacient.php" target="_self">
-          <span>Adauga Pacient</span>
+        <a class="nav-link" href="./components/adauga_pacient.php" target="_self">
+          <span>Adaugă Pacient</span>
         </a>
       </li>
 
 
       <!-- Adauga Analize -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/adauga_analize.php" target="_self">
-          <span>Adauga Analize</span>
+        <a class="nav-link" href="./adauga_analize.php" target="_self">
+          <span>Adaugă Analize</span>
         </a>
       </li>
 
@@ -52,8 +52,8 @@ print '
 
       <!-- Adauga Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/adauga_medici.php" target="_self">
-          <span>Adauga Medici</span>
+        <a class="nav-link" href="./adauga_medici.php" target="_self">
+          <span>Adaugă Medici</span>
         </a>
       </li>
 

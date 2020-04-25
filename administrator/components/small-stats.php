@@ -56,7 +56,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Pacienti inregistrati</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">pacienți înregistrați</div>
 
                       <div class="h5 mb-0 font-weight-bold text-gray-800">'.$num_conturi.'</div>
                     </div>
@@ -74,7 +74,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Numarul medicilor</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Numărul medicilor</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">'.$num_medici.'</div>
                     </div>
                     <div class="col-auto">
@@ -160,11 +160,11 @@
               <!-- ANUNT -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-danger">Atentie</h6>
+                  <h6 class="m-0 font-weight-bold text-danger">ATENȚIE</h6>
                 </div>
                 <div class="card-body border-left-danger">
-                  <p>Va rugam sa fiti atenti la modificarea datelor, acestea sunt afisate instant pacientilor nostrii.</p>
-                  <p class="mb-0">Dupa fiecare sesiune va rugam sa va deconectati de pe contul dvs. de admin.</p>
+                  <p>Vă rugăm sa fiți atenți la modificarea datelor. acestea sunt afișate instantaneu pacienților noștrii.</p>
+                  <p class="mb-0">După fiecare sesiune vă rugăm sa va deconectați de la contul dvs. de Admin.</p>
                 </div>
               </div>
 
