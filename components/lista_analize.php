@@ -40,7 +40,8 @@ th, td {
       $result = mysqli_query($mysqli, $sql);
      while($row = mysqli_fetch_assoc($result)) {
             $Inaltime=$row['Inaltime'];  
-            $Greutate=$row['Greutate'];}
+            $Greutate=$row['Greutate'];
+            $varsta=$row['Varsta'];}
             
         echo'     <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -104,7 +105,8 @@ if($IMC>=18.5 && $IMC<=24.9)
                 </div>
               </div>
             </div>
-            </div>';
+
+            ';
   }
   else
   {
@@ -127,7 +129,7 @@ if($IMC>=18.5 && $IMC<=24.9)
                 </div>
               </div>
             </div>
-            </div>';
+            ';
       }
       else
       {
@@ -150,12 +152,55 @@ if($IMC>=18.5 && $IMC<=24.9)
                 </div>
               </div>
             </div>
-            </div>';
+            ';
         }
       }
 
   }
-        ?>
+  $greutate_optima=($Inaltime-100-(($Inaltime-150)/4)+(($varsta-20)/4));
+  //Greutate Optima
+      echo'
+        <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Greutate optima</div>
+                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_optima.'</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dumbbell fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>';
+
+
+            //Greutate maxima
+            $greutate_maxima=($Inaltime * $Inaltime * 25)/ 10000;
+      echo'
+        <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Greutate maxima</div>
+                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_maxima.'</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>';?>
+
+
+
+
+
+              </div>
       </div></div>
     </div>
 

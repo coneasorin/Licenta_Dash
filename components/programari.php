@@ -21,26 +21,37 @@ require_once 'top-bar.php';
         <?php top_bar();
          $mysqli = new mysqli("localhost", 'root', '', 'licenta');
         //Neurologie
-        echo '
-          <p style="text-align:center;font-weight:bold;font-size:30px;">Fa-ti o programare on-line</p>
+         echo '
+         <form action="./programari_date.php" method="post">
           <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Neurologie</h6>
                 </div>
                 <div class="card-body border-left-success">';
-                   $result = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Neurologie'");
-        echo"<select name='ID' style='width:20%;'>";
-          while ($row = $result->fetch_assoc()) {
-            unset($ID,$Numele,$Prenumele);
-            $ID = $row['ID'];
-            $Numele = $row['Numele'];
-            $Prenumele = $row['Prenumele'];
-           echo '<option value="'.$ID.'">'.$Numele." ".$Prenumele.'</option>';
+                       $result2 = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Neurologie'");
+        echo"<center><select name='ID2' style='width:20%;'>";
+          while ($row2 = $result2->fetch_assoc()) {
+            unset($ID2,$Numele2,$Prenumele2);
+            $ID = $row2['ID'];
+            $Numele2 = $row2['Numele'];
+            $Prenumele2 = $row2['Prenumele'];
+           echo '<option value="'.$ID.'">'.$Numele2." ".$Prenumele2.'</option>';
          }
-                   echo"</select>";
-                echo'
+              echo '</select>
+              <select id="ora" name="ora">
+  <option value="8">8:00</option>
+  <option value="9">9:00</option>
+  <option value="10">10:00</option>
+  <option value="11">11:00</option>
+  <option value="12">12:00</option>
+  <option value="13">13:00</option>
+  <option value="14">14:00</option>
+  <option value="15">15:00</option>
+  </select>
+  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+              <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
-              </div>';
+              </div></form></center>';
               //Pediatrie
          echo '
          <form action="./programari_date.php" method="post">
@@ -50,55 +61,126 @@ require_once 'top-bar.php';
                 </div>
                 <div class="card-body border-left-success">';
                        $result2 = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Pediatrie'");
-        echo"<select name='ID2' style='width:20%;'>";
+        echo"<center><select name='ID2' style='width:20%;'>";
           while ($row2 = $result2->fetch_assoc()) {
-            unset($ID2,$Numele2,$Prenumele2,$Specializare2,$nr_cabinet2);
-            $ID2 = $row2['ID'];
+            unset($ID2,$Numele2,$Prenumele2);
+            $ID = $row2['ID'];
             $Numele2 = $row2['Numele'];
             $Prenumele2 = $row2['Prenumele'];
-            $Specializare2 = $row2['Specializare'];
-            $nr_cabinet2 = $row2['nr_cabinet'];
-           echo '<option name="'.$ID2.'" value="'.$ID2.'">'.$Numele2." ".$Prenumele2.'</option>';
+           echo '<option name="'.$ID.'" value="'.$ID.'">'.$Numele2." ".$Prenumele2.'</option>';
          }
-              echo '</select>';
-                       echo'<input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Vezi ID">';
-                echo'
+              echo '</select>
+              <select id="ora" name="ora">
+  <option value="8">8:00</option>
+  <option value="9">9:00</option>
+  <option value="10">10:00</option>
+  <option value="11">11:00</option>
+  <option value="12">12:00</option>
+  <option value="13">13:00</option>
+  <option value="14">14:00</option>
+  <option value="15">15:00</option>
+  </select>
+  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+              <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
-              </div></form>';
+              </div></form></center>';
   
               //Cardiologie
-               echo '
-          <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Pneumologie</h6>
-                </div>
-                <div class="card-body border-left-success">
-
-
-                </div>
-              </div>';
-              //Oncologie
-               echo '
+                echo '
+         <form action="./programari_date.php" method="post">
           <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Cardiologie</h6>
                 </div>
-                <div class="card-body border-left-success">
-
-
+                <div class="card-body border-left-success">';
+                       $result2 = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Cardiologie'");
+        echo"<center><select name='ID2' style='width:20%;'>";
+          while ($row2 = $result2->fetch_assoc()) {
+            unset($ID2,$Numele2,$Prenumele2);
+            $ID = $row2['ID'];
+            $Numele2 = $row2['Numele'];
+            $Prenumele2 = $row2['Prenumele'];
+           echo '<option name="'.$ID.'" value="'.$ID.'">'.$Numele2." ".$Prenumele2.'</option>';
+         }
+              echo '</select>
+              <select id="ora" name="ora">
+  <option value="8">8:00</option>
+  <option value="9">9:00</option>
+  <option value="10">10:00</option>
+  <option value="11">11:00</option>
+  <option value="12">12:00</option>
+  <option value="13">13:00</option>
+  <option value="14">14:00</option>
+  <option value="15">15:00</option>
+  </select>
+  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+              <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
-              </div>';
+              </div></form></center>';
+              //Oncologie
+                echo '
+         <form action="./programari_date.php" method="post">
+          <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Oncologie</h6>
+                </div>
+                <div class="card-body border-left-success">';
+                       $result2 = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Oncologie'");
+        echo"<center><select name='ID2' style='width:20%;'>";
+          while ($row2 = $result2->fetch_assoc()) {
+            unset($ID2,$Numele2,$Prenumele2);
+            $ID = $row2['ID'];
+            $Numele2 = $row2['Numele'];
+            $Prenumele2 = $row2['Prenumele'];
+           echo '<option name="'.$ID.'" value="'.$ID.'">'.$Numele2." ".$Prenumele2.'</option>';
+         }
+              echo '</select>
+              <select id="ora" name="ora">
+  <option value="8">8:00</option>
+  <option value="9">9:00</option>
+  <option value="10">10:00</option>
+  <option value="11">11:00</option>
+  <option value="12">12:00</option>
+  <option value="13">13:00</option>
+  <option value="14">14:00</option>
+  <option value="15">15:00</option>
+  </select>
+  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+              <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
+                </div>
+              </div></form></center>';
               //Hematologie
-               echo '
+                echo '
+         <form action="./programari_date.php" method="post">
           <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-success" style="text-align: center">Hematologie</h6>
                 </div>
-                <div class="card-body border-left-success">
-
-
+                <div class="card-body border-left-success">';
+                       $result2 = $mysqli->query("select ID,Numele, Prenumele from medici WHERE Specializare='Hematologie'");
+        echo"<center><select name='ID2' style='width:20%;'>";
+          while ($row2 = $result2->fetch_assoc()) {
+            unset($ID2,$Numele2,$Prenumele2);
+            $ID = $row2['ID'];
+            $Numele2 = $row2['Numele'];
+            $Prenumele2 = $row2['Prenumele'];
+           echo '<option name="'.$ID.'" value="'.$ID.'">'.$Numele2." ".$Prenumele2.'</option>';
+         }
+              echo '</select>
+              <select id="ora" name="ora">
+  <option value="8">8:00</option>
+  <option value="9">9:00</option>
+  <option value="10">10:00</option>
+  <option value="11">11:00</option>
+  <option value="12">12:00</option>
+  <option value="13">13:00</option>
+  <option value="14">14:00</option>
+  <option value="15">15:00</option>
+  </select>
+  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+              <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
-              </div>';
+              </div></form></center>';
         ?>
 
       </div>

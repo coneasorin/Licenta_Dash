@@ -35,7 +35,7 @@ print '
 
         <!-- Adauga Pacient -->
       <li class="nav-item">
-        <a class="nav-link" href="./components/adauga_pacient.php" target="_self">
+        <a class="nav-link" href="./adauga_pacient.php" target="_self">
           <span>Adaugă Pacient</span>
         </a>
       </li>
