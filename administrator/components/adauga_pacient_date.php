@@ -28,7 +28,6 @@ if (isset($_POST['adauga_pacient'])) {
     }
     return $anul_nasterii;
 }
-   echo "Varsta ta este de:".varsta($CNP)." ani";
     $Email = mysqli_real_escape_string($link, $_REQUEST['Email']);
     $Emailv = mysqli_real_escape_string($link, $_REQUEST['Emailv']);
     $Nume = mysqli_real_escape_string($link, $_REQUEST['Nume']);
@@ -45,6 +44,16 @@ if (isset($_POST['adauga_pacient'])) {
        VALUES ('$CNP', '$Parola','$Email', '$Nume', '$Prenume', '$Varsta', '$Inaltime', '$Greutate', '$Grupa_sange')";
      if(mysqli_query($link, $sql)){
          echo "Datele au fost adăugate cu succes.";
+                    $catre      = $Email;
+$subiect = 'Date atuentificare SPIKECSI-MED';
+$mesaj = "Nume de utilizator: ".$CNP."Parola: ".$Parola;
+$antet = array(
+    'From' => 'LocalHost',
+    'Reply-To' => 'Localhost',
+    'X-Mailer' => 'PHP/' . phpversion()
+);
+
+mail($catre, $subiect, $mesaj, $antet);
      }
      else{
          echo "Datele nu au putu fi adăugate." . mysqli_error($link);
