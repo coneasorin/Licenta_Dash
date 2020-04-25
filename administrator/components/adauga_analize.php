@@ -54,7 +54,7 @@ require_once 'top-bar.php';
                     <br>
 
 
-                    <button type="submit" name="adauga_analize" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Pacient</button>
+                    <button type="submit" name="adauga_analize" class=" btn btn-sm btn-primary"><i class="fas fa-check"></i> Adauga Analize</button>
                 </div>
                   <form>
               </div>

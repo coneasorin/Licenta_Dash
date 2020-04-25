@@ -50,6 +50,7 @@ echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px;">
           <td> <font face="Arial">Prenumele</font> </td> 
           <td> <font face="Arial">Specializare</font> </td> 
           <td> <font face="Arial">Anul absolvitii facultatii<br> de medicina</font> </td> 
+          <td> <font face="Arial">Nr. cabinet</font> </td> 
       </tr>';
  
 if ($result = $mysqli->query($query)) {
@@ -58,12 +59,14 @@ if ($result = $mysqli->query($query)) {
         $Prenumele = $row["Prenumele"];
         $Specializare = $row["Specializare"];
         $Absolvit = $row["Absolvit"]; 
+          $nr_cabinet = $row["nr_cabinet"]; 
  
         echo '<tr> 
                   <td>'.$Numele.'</td> 
                   <td>'.$Prenumele.'</td> 
                   <td>'.$Specializare.'</td> 
                   <td>'.$Absolvit.'</td> 
+                  <td>'.$nr_cabinet.'</td> 
               </tr>';
     }
     $result->free();

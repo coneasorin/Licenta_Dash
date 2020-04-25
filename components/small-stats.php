@@ -79,7 +79,7 @@
               </div>
             </div>
 
-            <!-- Earnings (Monthly) Card Example -->
+            <!-- Persoane Infectate -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
@@ -96,6 +96,7 @@
               </div>
             </div>
 
+            <!-- Persoane recuperate -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
@@ -112,7 +113,7 @@
               </div>
             </div>
 
-            <!-- Pending Requests Card Example -->
+            <!-- Persoane decedate -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -132,7 +133,7 @@
 
                    
 
-              <!-- Approach -->
+              <!-- Informatii -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-danger" style="text-align: cente">INFORMAȚII UTILE PRIVIND NOUL VIRUS COVID19</h6>
@@ -187,7 +188,7 @@ Adresaţi-vă medicului dacă aveţi febră, tuşiți sau respiraţi greu;</p></
                 </div>
                 <div class="card-body">
                   <p><span style="font-size:20px; font-weight:bold;">Covid-19</span> este un virus respirator care se răspândeşte în primul rând prin contactul cu o persoană infectată prin inhalarea unor particule provenite din tuse, strănut, picături de salivă, secreţii nazale. Este importantă exersarea unei igiene respiratorii bune. Când strănutaţi sau tuşiţi, apropiaţi gura de partea inferioară a cotului sau folosiţi şervetele pe care aruncati-le imediat la coşul de gunoi. Spălaţi-vă cât mai des pe mâini şi folosiţi geluri antibacteriene pe bază de alcool.</p>
-                  <a target="_blank" rel="nofollow" href="https://https://stirioficiale.ro/informatii/">Informează-te de surse oficiale →</a>
+                  <a target="_blank" rel="nofollow" href="https://https://stirioficiale.ro/informatii/">Informează  -te de surse oficiale →</a>
                 </div>
               </div>
 

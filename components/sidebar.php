@@ -46,7 +46,7 @@ print '
 
       <!-- Programari -->
       <li class="nav-item">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="./programari.php" >
           <span>Programari</span>
         </a>
       </li>

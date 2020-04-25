@@ -42,6 +42,12 @@ require_once 'small-stats.php';
 
                    <p class="">Anul absolvirii facultății de medicină</p>
                    <input type="text" class=" col-xs-2 form-control " name="an_absolvire_facultate" id="an_absolvire_facultate"></input>
+                   <p class="">Numarul cabinetului</p>
+                   <input type="text" class=" col-xs-2 form-control " name="nr_cabinet" id="nr_cabinet"></input>
+                    <p class="">Email</p>
+                   <input type="text" class="col-xs-2 form-control" name="Email" id="Email" required></input>
+                   <p class=""><span style="font-weight: bold;">Repeta Email</span></p>
+                   <input type="text" class="col-xs-2 form-control" name="Emailv" id="Emailv" required></input>
 
                    <p class="">CNP</p>
                    <input type="text" class=" col-xs-2 form-control " name="cnp" id="cnp"></input>
