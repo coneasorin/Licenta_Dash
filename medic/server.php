@@ -1,0 +1,39 @@
+<?php 
+	session_start();
+
+	// variable declaration
+	$CNP = "";
+	$email    = "";
+	$errors = array(); 
+	$_SESSION['success'] = "";
+
+	// connect to database
+	$db = mysqli_connect('localhost', 'root', '', 'licenta');
+
+	// LOGIN USER
+	if (isset($_POST['login_user'])) {
+		$CNP = mysqli_real_escape_string($db, $_POST['username']);
+		$Parola = mysqli_real_escape_string($db, $_POST['password']);
+		$_Session['CNP']=$CNP;
+		if (empty($CNP)) {
+			array_push($errors, "CNP is required");
+		}
+		if (empty($Parola)) {
+			array_push($errors, "Parola is required");
+		}
+
+		if (count($errors) == 0) {
+			$query = "SELECT * FROM medici WHERE CNP='$CNP' AND Parola='$Parola'";
+			$results = mysqli_query($db, $query);
+
+			if (mysqli_num_rows($results) == 1) {
+				$_SESSION['CNP'] = $CNP;
+				$_SESSION['success'] = "You are now logged in";
+				header('location: ../medic/components');
+			}else {
+				array_push($errors, "Wrong CNP/Parola combination");
+			}
+		}
+	}
+
+?>

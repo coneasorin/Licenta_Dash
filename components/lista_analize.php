@@ -180,6 +180,7 @@ if($IMC>=18.5 && $IMC<=24.9)
             //Greutate maxima
             $greutate_maxima=($Inaltime * $Inaltime * 25)/ 10000;
       echo'
+
         <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -194,9 +195,49 @@ if($IMC>=18.5 && $IMC<=24.9)
                   </div>
                 </div>
               </div>
-            </div>';?>
+            </div>';
 
 
+$query = "SELECT * FROM reteta WHERE cnp_pacient=$CNP order by data desc";
+ 
+ 
+echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px; text-align:center;"> 
+<br><br>
+<h3 style="text-align:center;">Diagnostice</h3><br>
+      <tr> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Nume Medic</font></td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Diagnostic</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Reteta </font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Observatii</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Data </font> </td> 
+      </tr>';
+ 
+if ($result = $mysqli->query($query)) {
+    while ($row = $result->fetch_assoc()) {
+    
+        $cnp_medic = $row["cnp_medic"];
+        $diagnostic = $row["diagnostic"];
+        $reteta = $row["reteta"];
+        $observatii = $row["observatii"]; 
+        $data = $row["data"]; 
+          $sql = "SELECT * FROM medici where CNP='$cnp_medic'";
+$result = mysqli_query($mysqli, $sql);
+while($row = mysqli_fetch_assoc($result)) {
+        $nume_medic=$row['Numele'];  
+        $prenume_medic=$row['Prenumele'];
+    }
+
+        echo '<tr> 
+                  <td>'.$nume_medic." ".$prenume_medic.'</td> 
+                  <td>'.$diagnostic.'</td> 
+                  <td>'.$reteta.'</td> 
+                  <td>'.$observatii.'</td> 
+                  <td>'.$data.'</td> 
+              </tr>';
+    }
+
+    $result->free();
+}  ?>
 
 
 
