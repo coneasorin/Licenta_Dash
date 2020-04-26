@@ -59,6 +59,13 @@ print '
         </a>
       </li>
 
+      <!-- Cont -->
+      <li class="nav-item">
+        <a class="nav-link" href="./date_cont.php" target="_top">
+          <span>Cont</span>
+        </a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 

@@ -53,15 +53,15 @@ th, td {
 $query = "SELECT * FROM analize WHERE CNP=$CNP order by data desc";
  
  
-echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px;"> 
+echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px; text-align:center;"> 
       <tr> 
-          <td> <font face="Arial">WBC (leucocite)</font> </td> 
-          <td> <font face="Arial">LYM (limfocite)</font> </td> 
-          <td> <font face="Arial">MON (monocite)</font> </td> 
-          <td> <font face="Arial">GRA (granulocite)</font> </td> 
-          <td> <font face="Arial">HgB (hemoglobina)</font> </td> 
-          <td> <font face="Arial">Plt (trombocite)</font> </td> 
-          <td> <font face="Arial">Data recoltarii</font> </td>
+          <td> <font face="Arial"><span style="font-weight:bold;">WBC (leucocite)</span> <br>Normal:(4,0 - 10,0)</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">LYM (limfocite)</span><br>Normal:(1,7 - 9,3)</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">MON (monocite)</span><br>Normal:(20,5 - 51,1)</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">GRA (granulocite)</span><br>Normal:(1,7 - 9,3)</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">HgB (hemoglobina)</span><br>Normal:(42,2 - 75,2)</font> </td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Plt (trombocite)</font><br>Normal:(150 - 450)</td> 
+          <td> <font face="Arial"><span style="font-weight:bold;">Data recoltarii</span></font></td>
       </tr>';
  
 if ($result = $mysqli->query($query)) {
@@ -166,7 +166,7 @@ if($IMC>=18.5 && $IMC<=24.9)
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Greutate optima</div>
-                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_optima.'</div>
+                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_optima." KG".'</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dumbbell fa-2x text-gray-300"></i>
@@ -186,7 +186,7 @@ if($IMC>=18.5 && $IMC<=24.9)
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Greutate maxima</div>
-                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_maxima.'</div>
+                      <div class="h5 mb-0 font-weight-bold text">'.$greutate_maxima." KG".'</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-weight fa-2x text-gray-300"></i>

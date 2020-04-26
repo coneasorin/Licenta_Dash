@@ -38,10 +38,11 @@ if (isset($_POST['adauga_pacient'])) {
     $Inaltime = mysqli_real_escape_string($link, $_REQUEST['Inaltime']);
     $Greutate = mysqli_real_escape_string($link, $_REQUEST['Greutate']);
     $Grupa_sange = mysqli_real_escape_string($link, $_REQUEST['Grupa_sange']);
+        $Numar_telefon = mysqli_real_escape_string($link, $_REQUEST['Numar_telefon']);
     if (strcmp($Email, $Emailv  ) == 0) {
 
-         $sql = "INSERT INTO pacienti (CNP, Parola, Email, Nume, Prenume, Varsta, Inaltime, Greutate, Grupa_sange) 
-       VALUES ('$CNP', '$Parola','$Email', '$Nume', '$Prenume', '$Varsta', '$Inaltime', '$Greutate', '$Grupa_sange')";
+         $sql = "INSERT INTO pacienti (CNP, Parola, Email, Nume, Prenume, Varsta, Inaltime, Greutate, Grupa_sange,Numar_telefon) 
+       VALUES ('$CNP', '$Parola','$Email', '$Nume', '$Prenume', '$Varsta', '$Inaltime', '$Greutate', '$Grupa_sange','$Numar_telefon')";
      if(mysqli_query($link, $sql)){
          echo "Datele au fost adăugate cu succes.";
                     $catre      = $Email;

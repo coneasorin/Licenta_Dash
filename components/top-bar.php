@@ -1,6 +1,5 @@
 <?php
 $mysqli = new mysqli("localhost", 'root', '', 'licenta');
-require_once 'functii.php';
   session_start(); 
 
   if (!isset($_SESSION['CNP'])) {

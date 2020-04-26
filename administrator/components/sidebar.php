@@ -43,7 +43,7 @@ print '
 
       <!-- Adauga Analize -->
       <li class="nav-item">
-        <a class="nav-link" href="./adauga_analize.php" target="_self">
+        <a class="nav-link" href=".a/dauga_analize.php" target="_self">
           <span>Adaugă Analize</span>
         </a>
       </li>

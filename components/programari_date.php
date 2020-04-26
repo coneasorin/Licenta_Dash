@@ -2,12 +2,20 @@
 $link = mysqli_connect("localhost", "root", "", "licenta");
 
 if (isset($_POST['programari_date'])) {
-    session_start();
     if ($link === false) {
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
 }
+session_start();
 $CNP = $_SESSION['CNP'];
+$sql3= "SELECT * from pacienti WHERE CNP='$CNP'";
+$resul3=mysqli_query($link,$sql3);
+while($row3=mysqli_fetch_assoc($resul3))
+{
+    $nume_pacient=$row3['Nume'];
+    $prenume_pacient=$row3['Prenume'];
+    $email_pacient=$row3['Email'];
+}
 $alegere = $_POST['ID2'];
 $ora = $_POST['ora'];
 $data = $_POST['data'];
@@ -33,7 +41,7 @@ if (($ora_db == $ora) && ($data_db == $data)) {
        VALUES ('$alegere', '$ora','$data','$CNP')";
     $catre = $email;
     $subiect = 'Aveți o programare de pe site ';
-    $mesaj = "Ora: " . $ora . "  Data: " . $data;
+    $mesaj = "Ora: " . $ora . "  Data: " . $data. " Nume pacient: ".$nume_pacient." ".$prenume_pacient;
     $antet = array(
         'From' => 'LocalHost',
         'Reply-To' => 'Localhost',
@@ -41,6 +49,7 @@ if (($ora_db == $ora) && ($data_db == $data)) {
     );
 
     mail($catre, $subiect, $mesaj, $antet);
+    mail($email_pacient, $subiect, $mesaj, $antet);
     if (mysqli_query($link, $sql)) {
         echo "Programarea a fost făcută. Te rugăm să te prezinți la timp!";
     } else {

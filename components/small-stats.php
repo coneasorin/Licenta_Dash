@@ -1,4 +1,3 @@
-
 <?php
         function small_stats ()
         {
@@ -53,7 +52,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Statistici la nivelul spitalului</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
@@ -129,9 +128,7 @@
                 </div>
               </div>
             </div>
-          </div>
-
-                   
+          </div>              
 
               <!-- Informatii -->
               <div class="card shadow mb-4">
@@ -188,13 +185,47 @@ Adresaţi-vă medicului dacă aveţi febră, tuşiți sau respiraţi greu;</p></
                 </div>
                 <div class="card-body">
                   <p><span style="font-size:20px; font-weight:bold;">Covid-19</span> este un virus respirator care se răspândeşte în primul rând prin contactul cu o persoană infectată prin inhalarea unor particule provenite din tuse, strănut, picături de salivă, secreţii nazale. Este importantă exersarea unei igiene respiratorii bune. Când strănutaţi sau tuşiţi, apropiaţi gura de partea inferioară a cotului sau folosiţi şervetele pe care aruncati-le imediat la coşul de gunoi. Spălaţi-vă cât mai des pe mâini şi folosiţi geluri antibacteriene pe bază de alcool.</p>
-                  <a target="_blank" rel="nofollow" href="https://https://stirioficiale.ro/informatii/">Informează  -te de surse oficiale →</a>
+                  <a target="_blank" rel="nofollow" href="https://stirioficiale.ro/informatii">Informează-te de surse oficiale →</a>
                 </div>
               </div>
 
           </div>
+          <div class="col-lg-4 mb-7">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Cazuri confirmate pe județe. </h6>
+                </div>
+                <div class="card-body">
+                  <iframe scrolling="no" src="https://datelazi.ro/embed/counties-map" width="100%" height="500"></iframe>
+                </div>
+              </div>
 
-        </div>';
+          </div>
+<div class="col-lg-4 mb-7">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Cazuri confirmate pe județe, listă. </h6>
+                </div>
+                <div class="card-body">
+                  <iframe scrolling="yes" src="https://datelazi.ro/embed/counties-table" width="100%" height="500"></iframe>
+                </div>
+              </div>
+</div>
+<div class="col-lg-4 mb-7">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Vârsta  medie ca cazurilor de îmbolnăvire?</h6>
+                </div>
+                <div class="card-body">
+               <iframe scrolling="no" src="https://datelazi.ro/embed/varsta-medie" width="100%" height="525"></iframe>
+
+                </div>
+              </div>
+
+          </div>
+        </div>
+        '
+        ;
         
 
         }
