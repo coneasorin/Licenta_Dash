@@ -30,7 +30,7 @@ print '
 
       <!-- Grafice -->
       <li class="nav-item">
-        <a class="nav-link" href="../components" target="_top">
+        <a class="nav-link" href="/Licenta_Dash/medic/components" target="_top">
           <span>Grafice</span>
         </a>
       </li>
@@ -38,7 +38,7 @@ print '
 
       <!-- Analize -->
       <li class="nav-item">
-      <a class="nav-link" href="../components/adauga_diagnostic.php" target="_top">
+      <a class="nav-link" href="/Licenta_Dash/medic/components/adauga_diagnostic.php" target="_top">
           <span>Adauga Diagnostic</span>
         </a>
       </li>
@@ -46,7 +46,7 @@ print '
 
       <!-- Programari -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/programari.php" >
+        <a class="nav-link" href="/Licenta_Dash/medic/components/programari.php" >
           <span>Programari</span>
         </a>
       </li>
@@ -54,7 +54,7 @@ print '
 
       <!-- Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="../components/lista_medici.php" target="_top">
+        <a class="nav-link" href="/Licenta_Dash/medic/components/lista_medici.php" target="_top">
           <span>Lista Medici</span>
         </a>
       </li>

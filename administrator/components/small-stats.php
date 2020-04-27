@@ -93,7 +93,7 @@
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Persoane infectate: <span style="font-size:20px; color: black;">'.$pers_infectate.' </span></div>
                       <div class="row no-gutters align-items-center">
 
-                         <form action="./update/update_pers_infectate.php" method="post">
+                         <form action="/Licenta_Dash/administrator/update/update_pers_infectate.php" method="post">
 
                         <div class="col" style="display:flex;flex-direction:row;">
                           <input type="text-primary" class=" form-control" name="infectate" id="infectate">
@@ -118,7 +118,7 @@
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Persoane vindecate: <span style="font-size:20px; color: black;">'.$pers_vindecate.'</span></div>
                       <div class="row no-gutters align-items-center">
                         
-                         <form action="./update/update_pers_vindecate.php" method="post">
+                         <form action="/Licenta_Dash/administrator/update/update_pers_vindecate.php" method="post">
 
                         <div class="col" style="display:flex;flex-direction:row;">
                           <input type="text-primary" class=" form-control" name="vindecate" id="vindecate">
@@ -141,7 +141,7 @@
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Persoane decedate: <span style="font-size:20px; color: black;">'.$pers_decedate.'</span></div>
                       <div class="row no-gutters align-items-center">
                         
-                         <form action="./update/update_pers_decedate.php" method="post">
+                         <form action="/Licenta_Dash/administrator/update/update_pers_decedate.php" method="post">
 
                         <div class="col" style="display:flex;flex-direction:row;">
                           <input type="text-primary" class=" form-control" name="decedate" id="decedate">

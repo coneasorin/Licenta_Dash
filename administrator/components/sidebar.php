@@ -27,7 +27,7 @@ print '
 
          <!-- Statistici -->
       <li class="nav-item">
-        <a class="nav-link" href="./" target="_self">
+        <a class="nav-link" href="/Licenta_Dash/administrator/components/index.php" target="_self">
           <span>Statistici Clinică</span>
         </a>
       </li>
@@ -35,7 +35,7 @@ print '
 
         <!-- Adauga Pacient -->
       <li class="nav-item">
-        <a class="nav-link" href="./adauga_pacient.php" target="_self">
+        <a class="nav-link" href="/Licenta_Dash/administrator/components/adauga_pacient.php" target="_self">
           <span>Adaugă Pacient</span>
         </a>
       </li>
@@ -43,7 +43,7 @@ print '
 
       <!-- Adauga Analize -->
       <li class="nav-item">
-        <a class="nav-link" href=".a/dauga_analize.php" target="_self">
+        <a class="nav-link" href="/Licenta_Dash/administrator/components/adauga_analize.php" target="_self">
           <span>Adaugă Analize</span>
         </a>
       </li>
@@ -52,7 +52,7 @@ print '
 
       <!-- Adauga Medici -->
       <li class="nav-item">
-        <a class="nav-link" href="./adauga_medici.php" target="_self">
+        <a class="nav-link" href="/Licenta_Dash/administrator/components/adauga_medici.php" target="_self">
           <span>Adaugă Medici</span>
         </a>
       </li>
