@@ -50,6 +50,7 @@ $result2 = mysqli_query($link, $sql2);
 while ($row2 = mysqli_fetch_assoc($result2)) {
     $ora = $row2["Ora"];
     $data = $row2["Data"];
+    $id_medic_programari=$row2["ID_Medic"];
     $cnp_pacient = $row2["CNP_PACIENT"];
     //Aflu data si ora programarii
     $sql3 = "SELECT * FROM pacienti WHERE CNP ='$cnp_pacient' ";
@@ -57,7 +58,8 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
     while ($row3 = mysqli_fetch_assoc($result3)) {
         $nume_pacient = $row3["Nume"];
         $prenume_pacient = $row3["Prenume"];
-        if ($data==$data_azi) {
+        echo "ID_Programari=".$id_medic_programari."   ID=".$id_medic;
+        if (($data==$data_azi)&&($id_medic==$id_medic_programari)) {
             echo '
                 <tr>
                     <td>' . $nume_pacient . " " . $prenume_pacient . '</td>
