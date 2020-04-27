@@ -48,7 +48,7 @@ require_once 'top-bar.php';
   <option value="14">14:00</option>
   <option value="15">15:00</option>
   </select>
-  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+  <input type="date" id="data" name="data" min="2020-03-19"  value="2020-03-20" max="2030-01-01">
               <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
               </div></form></center>';
@@ -80,7 +80,7 @@ require_once 'top-bar.php';
   <option value="14">14:00</option>
   <option value="15">15:00</option>
   </select>
-  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+  <input type="date" id="data" name="data" min="2020-03-19"  value="2020-03-20" max="2030-01-01">
               <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
               </div></form></center>';
@@ -113,7 +113,7 @@ require_once 'top-bar.php';
   <option value="14">14:00</option>
   <option value="15">15:00</option>
   </select>
-  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+  <input type="date" id="data" name="data" min="2020-03-19"  value="2020-03-20" max="2030-01-01">
               <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
               </div></form></center>';
@@ -145,7 +145,7 @@ require_once 'top-bar.php';
   <option value="14">14:00</option>
   <option value="15">15:00</option>
   </select>
-  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+  <input type="date" id="data" name="data" min="2020-03-19"  value="2020-03-20" max="2030-01-01">
               <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
               </div></form></center>';
@@ -177,7 +177,7 @@ require_once 'top-bar.php';
   <option value="14">14:00</option>
   <option value="15">15:00</option>
   </select>
-  <input type="date" id="data" name="data" min="2020-06-19"  value="2020-06-20" max="2030-01-01">
+  <input type="date" id="data" name="data" min="2020-03-19"  value="2020-03-20" max="2030-01-01">
               <input type="submit" class=" btn btn-sm btn-primary" name="programari_date" value="Solicita o programare">
                 </div>
               </div></form></center>';

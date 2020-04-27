@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", 'root', '', 'licenta');
+  $mysqli = new mysqli("localhost", 'root', '', 'licenta');
   session_start(); 
 
   if (!isset($_SESSION['CNP'])) {
@@ -16,20 +16,20 @@ $mysqli = new mysqli("localhost", 'root', '', 'licenta');
 
 
 <?php
-
-
-
 function top_bar ()
 {
   $mysqli = new mysqli("localhost", 'root', '', 'licenta');
   $CNP=$_SESSION['CNP'];
-$sql = "SELECT * FROM medici where CNP='$CNP' ";
-$result = mysqli_query($mysqli, $sql);
+$sql = "SELECT *  from medici WHERE CNP='$CNP'";
+      $result = mysqli_query($mysqli, $sql);
+      while($row = mysqli_fetch_assoc($result)) 
+      {
+            $nume_medic=$row['Numele'];  
+             $prenume_medic=$row['Prenumele'];  
+      }
 
-while($row = mysqli_fetch_assoc($result)) {
-        $nume_medic=$row['Numele'];  
-        $prenume_medic=$row['Prenumele'];
-    }
+
+
     print '
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -47,7 +47,7 @@ while($row = mysqli_fetch_assoc($result)) {
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bun venit,  <span style="font-size:15px;font-weight:bold;">'.'DR. '.$nume_medic.' '.$prenume_medic.'</span></span>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bun venit,  <span style="font-size:15px;font-weight:bold;">'.'DR. '.$nume_medic." ".$prenume_medic.'</span></span>
                 <a href="index.php?logout" style="color:red ">Deconectare</a>
              
               
