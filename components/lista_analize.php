@@ -214,20 +214,19 @@ echo '<table border="2" cellspacing="2" cellpadding="2" style="height:50px; text
  
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
-    
         $cnp_medic = $row["cnp_medic"];
         $diagnostic = $row["diagnostic"];
         $reteta = $row["reteta"];
         $observatii = $row["observatii"]; 
         $data = $row["data"]; 
-          $sql = "SELECT * FROM medici where CNP='$cnp_medic'";
-$result = mysqli_query($mysqli, $sql);
-while($row = mysqli_fetch_assoc($result)) {
-        $nume_medic=$row['Numele'];  
-        $prenume_medic=$row['Prenumele'];
-    }
-
-        echo '<tr> 
+$sql = "SELECT * FROM medici where CNP='$cnp_medic'";
+$result2 = mysqli_query($mysqli, $sql);
+while($row = mysqli_fetch_assoc($result2)) 
+{
+$nume_medic=$row['Numele'];  
+$prenume_medic=$row['Prenumele'];
+}
+       echo '<tr> 
                   <td>'.$nume_medic." ".$prenume_medic.'</td> 
                   <td>'.$diagnostic.'</td> 
                   <td>'.$reteta.'</td> 
@@ -236,8 +235,12 @@ while($row = mysqli_fetch_assoc($result)) {
               </tr>';
     }
 
-    $result->free();
-}  ?>
+    
+}
+$result->free();
+
+
+  ?>
 
 
 

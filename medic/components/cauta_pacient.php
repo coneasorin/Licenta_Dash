@@ -121,8 +121,8 @@ if ($result = $mysqli->query($query)) {
         $observatii = $row["observatii"]; 
         $data = $row["data"]; 
           $sql = "SELECT * FROM medici where CNP='$cnp_medic'";
-$result = mysqli_query($mysqli, $sql);
-while($row = mysqli_fetch_assoc($result)) {
+$result2 = mysqli_query($mysqli, $sql);
+while($row = mysqli_fetch_assoc($result2)) {
         $nume_medic=$row['Numele'];  
         $prenume_medic=$row['Prenumele'];
     }

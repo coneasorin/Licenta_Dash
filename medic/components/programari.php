@@ -58,7 +58,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
     while ($row3 = mysqli_fetch_assoc($result3)) {
         $nume_pacient = $row3["Nume"];
         $prenume_pacient = $row3["Prenume"];
-        echo "ID_Programari=".$id_medic_programari."   ID=".$id_medic;
+       // echo "ID_Programari=".$id_medic_programari."   ID=".$id_medic;
         if (($data==$data_azi)&&($id_medic==$id_medic_programari)) {
             echo '
                 <tr>

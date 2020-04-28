@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2020 at 09:32 PM
+-- Generation Time: Apr 28, 2020 at 08:38 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -35,18 +35,21 @@ CREATE TABLE `analize` (
   `HgB` float NOT NULL,
   `Plt` float NOT NULL,
   `MON` float NOT NULL,
-  `data` date NOT NULL
+  `data` date NOT NULL,
+  `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `analize`
 --
 
-INSERT INTO `analize` (`CNP`, `WBC`, `LYM`, `GRA`, `HgB`, `Plt`, `MON`, `data`) VALUES
-('1980619284570', 19, 2, 321, 2, 2, 0, '0000-00-00'),
-('1980619284570', 12, 155, 938, 219, 1123, 0, '2015-06-19'),
-('1980618284577', 12, 155, 456, 442, 123, 0, '2020-04-07'),
-('1881126266671', 123, 456, 1123, 356, 1123, 0, '2020-06-12');
+INSERT INTO `analize` (`CNP`, `WBC`, `LYM`, `GRA`, `HgB`, `Plt`, `MON`, `data`, `ID`) VALUES
+('1980619284570', 19, 2, 321, 2, 2, 91, '2020-07-30', 1),
+('1980619284570', 12, 155, 938, 219, 1123, 31, '2015-06-19', 2),
+('1980618284577', 12, 155, 456, 442, 123, 13, '2020-04-07', 3),
+('1881126266671', 123, 456, 1123, 356, 1123, 426, '2020-06-12', 4),
+('1980619284579', 1233, 321, 112, 234, 13, 155, '2020-06-22', 5),
+('1980619284570', 8, 35, 50, 200, 122, 0, '2020-07-24', 6);
 
 -- --------------------------------------------------------
 
@@ -78,8 +81,9 @@ INSERT INTO `medici` (`Numele`, `Prenumele`, `Specializare`, `Absolvit`, `CNP`, 
 ('MAGUREANU', 'MIHNEA - ANDREI', 'Pediatrie', '1980', '1850516398550', 6, '', '5', '123456'),
 ('CURELEA', 'ILIE - DANUT ', 'Neurologie', '1980', '1961116120215', 7, '', '6', '123456'),
 ('Conea ', 'Ion', 'Hematologie', '1970', '1231231234567', 14, 'spikehack3r@gmail.com', '3', '5fa570070e'),
-('Comanescu', 'Cristian', 'Neurologie', '2000', '5021202079701', 15, 'comanescuc@gmail.com', '11', '9c76711197'),
-('Rebreanu', 'Liviu', 'Pediatrie', '2000', '1940310307240', 16, 'liviureb@gmail.com', '12', '816c7c8e40');
+('Comanescu', 'Cristian', 'Neurologie', '2000', '1980619284570', 15, 'comanescuc@gmail.com', '11', 'panasonic1'),
+('Rebreanu', 'Liviu', 'Pediatrie', '2000', '1940310307240', 16, 'liviureb@gmail.com', '12', '816c7c8e40'),
+('Gheorghita', 'Diana', 'Pediatrie', '1965', '1970106053076', 17, 'diana_g100@gmail.com', '8', '56e28d0a65');
 
 -- --------------------------------------------------------
 
@@ -106,8 +110,8 @@ CREATE TABLE `pacienti` (
 
 INSERT INTO `pacienti` (`CNP`, `Parola`, `Email`, `Numar_telefon`, `Nume`, `Prenume`, `Varsta`, `Inaltime`, `Greutate`, `Grupa_sange`) VALUES
 ('1881126266671', 'bec381bf3c', 'baciucucristian@gmail.com', '0724702650', 'Cristian-Valeriu', 'Baciucu', 32, 176, 65, 'b1'),
-('1980618284577', '2b879a758e', 'Popescuion@gmail.com', '0722919283', 'Caloian', 'Amelia', 22, 185, 130, 'b1'),
-('1980619284570', 'panasonic2', 'coneasorin@gmail.com', '0724702651', 'Conea ', 'Sorin', 21, 187, 76, 'b1'),
+('1980618284577', '2b879a758e', 'caloianamela@gmail.com', '0722919283', 'Caloian', 'Amelia', 22, 185, 130, 'b1'),
+('1980619284570', 'panasonic1', 'coneasorin@gmail.com', '0724702651', 'Conea ', 'Sorin', 21, 187, 76, 'b1'),
 ('1980619284577', 'e9ca7b2f59', 'spikehack3r@gmail.com', '0239128379', 'Popescu', 'Ionut', 22, 185, 85, 'b1');
 
 -- --------------------------------------------------------
@@ -129,17 +133,17 @@ CREATE TABLE `programari` (
 --
 
 INSERT INTO `programari` (`ID`, `ID_Medic`, `Ora`, `Data`, `CNP_PACIENT`) VALUES
-(1, 7, 8, '2020-06-20', '1980619284570'),
-(2, 7, 9, '2020-06-20', '1980619284570'),
-(3, 6, 10, '2020-06-20', '1980619284570'),
-(4, 16, 9, '2020-07-20', '1980619284570'),
-(5, 4, 10, '2020-09-20', '1980619284570'),
-(6, 1, 8, '2020-06-20', '1980619284570'),
-(7, 4, 12, '2020-06-20', '1980619284570'),
-(8, 16, 11, '2020-10-20', '1881126266671'),
-(9, 16, 11, '2020-07-20', '1881126266671'),
-(10, 0, 0, '0000-00-00', ''),
-(11, 0, 0, '0000-00-00', '');
+(4, 7, 8, '2020-04-27', '1980619284570'),
+(5, 15, 9, '2020-04-27', '1980619284570'),
+(6, 5, 9, '2020-04-27', '1980619284570'),
+(7, 15, 10, '2020-04-27', '1980619284570'),
+(8, 15, 11, '2020-04-27', '1980618284577'),
+(9, 15, 14, '2020-04-27', '1980619284577'),
+(10, 15, 14, '2020-04-28', '1980619284570'),
+(11, 15, 15, '2020-04-27', '1980619284570'),
+(12, 15, 13, '2020-04-27', '1881126266671'),
+(13, 0, 0, '0000-00-00', ''),
+(14, 0, 0, '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -152,8 +156,20 @@ CREATE TABLE `reteta` (
   `cnp_pacient` varchar(13) NOT NULL,
   `data` date NOT NULL,
   `diagnostic` text NOT NULL,
-  `reteta` text NOT NULL
+  `reteta` text NOT NULL,
+  `observatii` text NOT NULL,
+  `id_reteta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reteta`
+--
+
+INSERT INTO `reteta` (`cnp_medic`, `cnp_pacient`, `data`, `diagnostic`, `reteta`, `observatii`, `id_reteta`) VALUES
+('1970106053076', '1980619284570', '2020-07-20', 'Otita ', ' 2 picături ulei esențial de Busuioc\r\n2 picături ulei esențial de Lavandă\r\n1 picătură ulei esențial de Mușețel Roman\r\n2 picături ulei esențial de Arbore de ceai', 'A nu se depasi doza zilnica.', 1),
+('1980619284570', '1980619284570', '2020-06-20', ' Raceala', 'Paracetamol 3 ori pe zi', 'A nu se depasi doza zilnica.', 2),
+('1980619284570', '1980619284570', '2020-04-27', ' Abces dentar', ' ABACAVIR SANDOZ 300 mg\r\nACCUPRO 5 mg\r\nACCUZIDE 10 mg/12,5 mg', 'A nu se depasi doza zilnica.', 3),
+('1980619284570', '1980619284570', '2020-02-05', ' Grip', 'Paracetamol ', 'A nu se depasi doza zilnica.', 4);
 
 -- --------------------------------------------------------
 
@@ -173,7 +189,7 @@ CREATE TABLE `statistici` (
 --
 
 INSERT INTO `statistici` (`p_infectate`, `p_vindecate`, `p_decedate`, `p_testate`) VALUES
-(10673, 1822, 733, 1);
+(10023, 2072, 583, 1);
 
 -- --------------------------------------------------------
 
@@ -200,6 +216,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
 --
 
 --
+-- Indexes for table `analize`
+--
+ALTER TABLE `analize`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `medici`
 --
 ALTER TABLE `medici`
@@ -218,6 +240,12 @@ ALTER TABLE `programari`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `reteta`
+--
+ALTER TABLE `reteta`
+  ADD PRIMARY KEY (`id_reteta`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -229,16 +257,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `analize`
+--
+ALTER TABLE `analize`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `medici`
 --
 ALTER TABLE `medici`
-  MODIFY `ID` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `programari`
 --
 ALTER TABLE `programari`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `reteta`
+--
+ALTER TABLE `reteta`
+  MODIFY `id_reteta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
