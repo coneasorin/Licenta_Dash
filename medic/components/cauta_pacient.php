@@ -50,14 +50,7 @@ th, td {
   padding: 15px;
 }
 </style>';
-          $mysqli = new mysqli("localhost", 'root', '', 'licenta');
-     //  $sql = "SELECT * from pacienti WHERE CNP=$CNP";
-     //  $result = mysqli_query($mysqli, $sql);
-     // while($row = mysqli_fetch_assoc($result)) {
-     //        $Inaltime=$row['Inaltime'];  
-     //        $Greutate=$row['Greutate'];
-     //        $varsta=$row['Varsta'];}
-           
+          $mysqli = new mysqli("localhost", 'root', '', 'licenta');   
 
             $mysqli = new mysqli("localhost", 'root', '', 'licenta'); 
 $query = "SELECT * FROM analize WHERE CNP=$cnp_pacient order by data desc";

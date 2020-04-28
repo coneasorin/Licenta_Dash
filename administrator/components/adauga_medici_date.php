@@ -16,7 +16,7 @@ if (isset($_POST['adauga_medici'])) {
     $cnp = mysqli_real_escape_string($link, $_REQUEST['cnp']);
     $parola=md5($cnp);
     $parola =substr($parola, -10);
-    if (strcmp($Email, $Emailv  ) == 0) {
+    if (strcmp($Email, $Emailv  ) == 0 && is_string($nume_medic) && is_string($prenume_medic) && is_numeric($an_absolvire_facultate) && is_numeric($nr_cabinet) && (strlen($cnp)==13) && is_string($specializare_medic)) {
     $sql = "INSERT INTO medici (Numele, Prenumele, Specializare, Absolvit, CNP, Email, nr_cabinet, parola)
 
         VALUES ('$nume_medic', '$prenume_medic', '$specializare_medic', '$an_absolvire_facultate', '$cnp','$Email','$nr_cabinet','$parola')";

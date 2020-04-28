@@ -39,7 +39,7 @@ if (isset($_POST['adauga_pacient'])) {
     $Greutate = mysqli_real_escape_string($link, $_REQUEST['Greutate']);
     $Grupa_sange = mysqli_real_escape_string($link, $_REQUEST['Grupa_sange']);
         $Numar_telefon = mysqli_real_escape_string($link, $_REQUEST['Numar_telefon']);
-    if (strcmp($Email, $Emailv  ) == 0) {
+    if ((strcmp($Email, $Emailv ) == 0) && (strlen($CNP)==13) && ((strlen($Numar_telefon)==10) && (filter_var($Email, FILTER_VALIDATE_EMAIL) && is_string($Nume) && is_string($Prenume)))) {
 
          $sql = "INSERT INTO pacienti (CNP, Parola, Email, Nume, Prenume, Varsta, Inaltime, Greutate, Grupa_sange,Numar_telefon) 
        VALUES ('$CNP', '$Parola','$Email', '$Nume', '$Prenume', '$Varsta', '$Inaltime', '$Greutate', '$Grupa_sange','$Numar_telefon')";
@@ -63,7 +63,7 @@ mail($catre, $subiect, $mesaj, $antet);
     }
     else
     {
-        echo"<h2>Emailul nu este identic, te rog sa verifici corectitudinea datelor </h2>";
+        echo"<h2>Te rugăm să verifici corectitudinea datelor </h2>";
     }
    
     mysqli_close($link);

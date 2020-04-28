@@ -44,7 +44,7 @@ require_once 'top-bar.php';
                           <input type="text" id="update_inaltime" name="update_inaltime" class="form-control" style="width:50%;margin-top:10px;">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                       
                     </div>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ require_once 'top-bar.php';
                       <input type="text" id="update_greutate" name="update_greutate" class="form-control" style="width:50%;margin-top:10px;">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                       
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ require_once 'top-bar.php';
                       <input type="text" id="update_tel" name="update_tel" class="form-control" style="width:50%;margin-top:10px;">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                       
                     </div>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ require_once 'top-bar.php';
                       <input type="text" id="update_email" name="update_email" class="form-control" style="width:50%;margin-top:10px;">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                       
                     </div>
                   </div>
                 </div>
@@ -107,11 +107,13 @@ require_once 'top-bar.php';
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Parola</div>
                       <p>Parola veche</p>
                       <input type="password" id="parola_veche" name="parola_veche" class="form-control" style="width:50%;margin-top:10px;">
-                      <p>Parola noua</p>
+                      <p>Parola nouă</p>
                       <input type="password" id="parola_noua" name="parola_noua" class="form-control" style="width:50%;margin-top:10px;">
+                      <p>Repetă parola nouă</p>
+                      <input type="password" id="parola_noua" name="parola_noua_repetat" class="form-control" style="width:50%;margin-top:10px;">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-weight fa-2x text-gray-300"></i>
+                       
                     </div>
                   </div>
                 </div>

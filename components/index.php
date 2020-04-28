@@ -11,7 +11,7 @@ require_once 'small-stats.php';
    <script src="https://kit.fontawesome.com/319610a3d1.js" crossorigin="anonymous"></script>
 
 
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/style.min.css" rel="stylesheet">
 
   <title>Software medical - PACIENT</title>
 </head>

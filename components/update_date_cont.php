@@ -14,6 +14,7 @@ if (isset($_POST['actualizeaza_date'])) {
     $update_email = mysqli_real_escape_string($link, $_REQUEST['update_email']);
     $parola_veche = mysqli_real_escape_string($link, $_REQUEST['parola_veche']);
     $parola_noua = mysqli_real_escape_string($link, $_REQUEST['parola_noua']);
+    $parola_noua_repetat = mysqli_real_escape_string($link, $_REQUEST['parola_noua_repetat']);
         $sql = "SELECT * from pacienti WHERE CNP = '$CNP'";
       $result = mysqli_query($link, $sql);
       while($row = mysqli_fetch_assoc($result)) {
@@ -36,19 +37,19 @@ if (isset($_POST['actualizeaza_date'])) {
         if(mysqli_query($link, $sql2)){
          echo "Greutatea a fost modificată";}
     }
-    if (isset ($update_tel) && strlen($update_tel)==10)
+    if (isset ($update_tel) && strlen($update_tel)==10 && (is_numeric($update_tel) ))
     {
         $sql3 = "UPDATE pacienti SET Numar_telefon = '$update_tel' WHERE CNP= '$CNP'";
         if(mysqli_query($link, $sql3)){
          echo "Numărul de telefon a fost actualizat";}
     }
-    if($update_email)
+    if(($update_email)&&(filter_var($update_email, FILTER_VALIDATE_EMAIL)))
     {
         $sql4 = "UPDATE pacienti SET Email = '$update_email' WHERE CNP= '$CNP'";
         if(mysqli_query($link, $sql4)){
          echo "Emailul a fost actualizat.";}
     }
-    if (strcmp($parola_veche, $parola_db  ) == 0) {
+    if ((strcmp($parola_veche, $parola_db  ) == 0)&&($parola_noua==$parola_noua_repetat)) {
                         $sql5 = "UPDATE pacienti SET Parola = '$parola_noua' WHERE CNP= '$CNP'";
         if(mysqli_query($link, $sql5)){
          echo "Parola dvs a fost actualizata.";}

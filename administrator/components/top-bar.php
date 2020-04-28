@@ -33,7 +33,7 @@ function top_bar ()
             </div>
           </form>
 
-          <!-- Topbar Navbar -->
+
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMINISTRATOR</span>

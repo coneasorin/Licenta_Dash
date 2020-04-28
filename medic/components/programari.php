@@ -10,8 +10,7 @@ require_once 'small-stats.php';
               rel="stylesheet">
         <script src="https://kit.fontawesome.com/319610a3d1.js" crossorigin="anonymous"></script>
 
-        <!-- Custom styles for this template-->
-        <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="../../css/style.min.css" rel="stylesheet">
 
         <title>SPIKECSI-MED - Medic</title>
     </head>
@@ -35,6 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 //Am aflat ID MEDIC
 $data_azi = date("Y-m-d");
+
 ?>
     <table border="2" cellspacing="2" cellpadding="2" style="height:50px; text-align:center;">
         <br><br>

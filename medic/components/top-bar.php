@@ -44,7 +44,6 @@ $sql = "SELECT *  from medici WHERE CNP='$CNP'";
             </div>
           </form>
 
-          <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
               <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bun venit,  <span style="font-size:15px;font-weight:bold;">'.'DR. '.$nume_medic." ".$prenume_medic.'</span></span>

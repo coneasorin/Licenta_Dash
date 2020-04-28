@@ -14,14 +14,29 @@ if (isset($_POST['adauga_analize'])) {
      $hgb = mysqli_real_escape_string($link, $_REQUEST['hgb']);
       $plt = mysqli_real_escape_string($link, $_REQUEST['plt']);
        $data = mysqli_real_escape_string($link, $_REQUEST['data']);
+        $sql = "SELECT CNP from pacienti";
+      $result = mysqli_query($link, $sql);
 
-    $sql = "INSERT INTO analize (CNP, WBC, LYM, GRA, HgB, Plt, data) 
+      while($row = mysqli_fetch_assoc($result)) {
+            $cnp_pacient=$row['CNP'];
+            if($cnp_pacient==$CNP)
+            {
+	if(strlen($CNP)==13)
+       	{
+   $sql = "INSERT INTO analize (CNP, WBC, LYM, GRA, HgB, Plt, data) 
         VALUES ('$CNP', '$wbc', '$lym', '$gra', '$hgb', '$plt', '$data')";
+       		}
     if(mysqli_query($link, $sql)){
         echo "Datele au fost adaugate cu succes.";
     } else{
         echo "NU am putut adauga datele. " . mysqli_error($link);
     }
+
+            }  
+                              }
+       
+
+
 
     mysqli_close($link);
 }
