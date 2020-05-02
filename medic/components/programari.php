@@ -69,9 +69,10 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
                 ';
         }
     }
+  
 
 
-}
+}  echo $data_azi;
 echo '
         </div>
         ';
