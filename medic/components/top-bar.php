@@ -33,7 +33,7 @@ $sql = "SELECT *  from medici WHERE CNP='$CNP'";
     print '
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-          <form action="./components/cauta_pacient.php" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post">
+          <form action="../components/cauta_pacient.php" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Cauta pacient dupa CNP" aria-label="Search" id="cnp_pacient" name="cnp_pacient" aria-describedby="basic-addon2">
               <div class="input-group-append">
